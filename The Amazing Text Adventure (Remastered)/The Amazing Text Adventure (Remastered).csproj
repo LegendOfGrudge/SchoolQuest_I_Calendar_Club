@@ -113,5 +113,59 @@
   <ItemGroup>
     <None Include="Resources\Wrench.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Cafeteria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Chemistry Lab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Eastern Block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Elevator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Hairstyling Room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Health Room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Janitors Closet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Math Room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In North Section.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In North Staircase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Office.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Power Mech Room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In South Section.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In South Staircase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Tech Room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Welding Room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\In Western Block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\School Level 2 %28Remaster%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

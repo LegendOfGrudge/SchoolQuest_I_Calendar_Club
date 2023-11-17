@@ -10,15 +10,28 @@ using System.Windows.Forms;
 
 namespace The_Amazing_Text_Adventure__Remastered_
 {
+    /// <summary>
+    /// Text Adventure about Mr. Wachs and his excellent adventure to find out why no students showed up
+    /// for class today. Peer into the terrifyingly weird minds of two Grade 11 students and then 
+    /// remastered by one of those students when he was 25 as a birthday gift for the other student. 
+    /// Friendship, it makes the world go 'round! 
+    /// 
+    /// By: LegendOfGrudge
+    /// Message: I created the Sound of Madness, so be Legendary!
+    /// 
+    /// </summary>
     public partial class frmGameDesign : Form
     {
+        // Navigation variables
         string[] options;
         int[] positions;
         int position;
 
+        // Status variables
         bool isAlive = true;
         bool hasWon = false;
 
+        // Item variables
         bool hasBungee = false;
         bool hasCandlestick = false;
         bool hasChemicals = false;
@@ -30,9 +43,11 @@ namespace The_Amazing_Text_Adventure__Remastered_
         bool hasWeldingKey = false;
         bool hasWrench = false;
 
+        // Extra variables (for style points)
         string hairstyle = "HAS HAIR";
         int elevatorVisits = 1;
 
+        // Bad input response messages (Smartass Power: Over 9000!)
         string[] messages =
         {
             "Maybe learn how to spell",
@@ -95,9 +110,42 @@ namespace The_Amazing_Text_Adventure__Remastered_
             "Type words before entering",
             "Where there's a textbox, there's usually code looking for correct spelling",
             "I want that as an item!",
-            "Are you even trying?"
+            "Are you even trying?",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
+            "Pro Tip: If you get stuck try typing either OK or BACK to continue",
         };
 
+        /// <summary>
+        /// Shows what to display when the application is first run. 
+        /// </summary>
         public frmGameDesign()
         {
             InitializeComponent();
@@ -107,6 +155,9 @@ namespace The_Amazing_Text_Adventure__Remastered_
             positions = new int[2] { 0, 0 };
         }
 
+        /// <summary>
+        /// Checks the input when the user hits the Enter key and evaluates positioning.
+        /// </summary>
         private void txbInput_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -116,7 +167,7 @@ namespace The_Amazing_Text_Adventure__Remastered_
 
                 for (int i = 0; i < options.Length; i++)
                 {
-                    if (txbInput.Text.Contains(options[i]))
+                    if (txbInput.Text.ToUpper().Contains(options[i]))
                     {
                         found = true;
 
@@ -151,6 +202,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                             hasWrench = false;
                             pbxWrench.Visible = false;
 
+                            pbxMap.Image = Properties.Resources.School_Level_1__Remaster_;
+
                             hairstyle = "HAS HAIR";
                             elevatorVisits = 1;
                         }
@@ -177,6 +230,11 @@ namespace The_Amazing_Text_Adventure__Remastered_
                 txbInput.Focus();
             }
         }
+
+        /// <summary>
+        /// Places the user in the dialog option related to the position given.
+        /// </summary>
+        /// <param name="position"> The position of the user in the story to show the next dialog option. </param>
         private void storyChapter(int position)
         {
             if (isAlive && !hasWon)
@@ -185,8 +243,10 @@ namespace The_Amazing_Text_Adventure__Remastered_
                 {
                     // INTRO
                     lblText.Text = "\nYou enter the school for a typical day of work. Unlocking the door to room B4, you sit at your desk and start googling the\r\nbad joke of the week. Not that it'll really matter. All those crazy kids are too busy playing Space Monster Kitchen \r\nDesigner to care. Minutes turn into hours, and into centuries. You begin to notice the school seems a lot quieter than\r\nusual. You peek your head out the door and look both ways, but no one comes into view. You re-enter the room and think to\r\nyourself: \"Has the school been abandoned?\" If you want to explore and find a reason for this, you can EXIT the ROOM. You\r\nalso remember there was something to grab in the DESK DRAWER and the HAND-IN BASKET.";
-                    options = new string[4] { "DRAWER", "HAND-IN",  "BASKET", "EXIT ROOM" };
-                    positions = new int[4] { 1, 2, 2, 3 };
+                    options = new string[5] { "DRAWER", "HAND-IN",  "BASKET", "EXIT", "ROOM" };
+                    positions = new int[5] { 1, 2, 2, 3, 3 };
+
+                    pbxMap.Image = Properties.Resources.In_Tech_Room;
                 }
                 else if (position == 1)
                 {
@@ -195,15 +255,15 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     pbxBrokenKey.Visible = true;
 
                     lblText.Text += "\nYou open the drawer and find an old rusty key that acts as a backup key to the main office. \"Perhaps the office would be a \r\ngood place to check to figure out what's going on.\" You pocket the key and then question how long it's been since the school\r\nhas changed their locking mechanisms. ";
-                    options = new string[2] { "OK", "BACK" };
-                    positions = new int[2] { 0, 0 };
+                    options = new string[6] { "OK", "BACK", "HAND-IN", "BASKET", "EXIT", "ROOM" };
+                    positions = new int[6] { 0, 0, 2, 2, 3, 3 };
                 }
                 else if (position == 2)
                 {
                     // TECH ROOM: ASSIGNMENT HAND-IN 
                     lblText.Text += "\nYou take a closer inspection of the hand-in basket. It appears only your prized students Aidan and Nick have bothered to \r\nhand anything in. You remind yourself to give them both 1000000000% on their next quiz. ";
-                    options = new string[2] { "OK", "BACK" };
-                    positions = new int[2] { 0, 0 };
+                    options = new string[5] { "OK", "BACK", "DRAWER", "EXIT", "ROOM" };
+                    positions = new int[5] { 0, 0, 1, 3, 3 };
                 }
                 else if (position == 3)
                 {
@@ -211,6 +271,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou close the door behind you and re-enter the Southern Block on the school. Scanning the various hallways, you notice a few\r\npoints of interest; a STAIRCASE leading upstairs, a POWER MECHANICS ROOM, a WELDING ROOM, and a HAIRSTYLING ROOM. You can \r\nalso go north to the NORTHERN BLOCK. ";
                     options = new string[5] { "STAIRCASE", "POWER MECHANICS ROOM", "WELDING ROOM", "HAIRSTYLING ROOM", "NORTHERN BLOCK" };
                     positions = new int[5] { 4, 8, 10, 12, 14 };
+
+                    pbxMap.Image = Properties.Resources.In_South_Section;
                 }
                 else if (position == 4)
                 {
@@ -218,6 +280,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou approach the SOUTHERN STAIRWELL, you notice a 1-inch thick strand of CAUTION tape blocks your way forward up the stairs.\r\nYou contemplate stepping over it, but then think there must be a more complicated and puzzle-based way upstairs. You also\r\nnotice a VENDING MACHINE to your right.";
                     options = new string[4] { "SOUTHERN BLOCK", "BACK", "VENDING", "MACHINE" };
                     positions = new int[4] { 3, 3, 5, 5 };
+
+                    pbxMap.Image = Properties.Resources.In_South_Staircase;
                 }
                 else if (position == 5)
                 {
@@ -255,6 +319,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nOpening the dusty power mechanics room, you see various machines that don't particularly interest you. What IS of interest,\r\nhowever is a small iron box sealed with several large bolts. Shaking the box, you hear a small object inside. You could\r\nprobably remove the bolt if you had the right tool. ";
                     options = new string[2] { "SOUTHERN BLOCK", "BACK" };
                     positions = new int[2] { 3, 3 };
+
+                    pbxMap.Image = Properties.Resources.In_Power_Mech_Room;
                 }
                 else if (position == 8 && hasWrench && !hasWeldingKey)
                 {
@@ -262,6 +328,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nOpening the dusty power mechanics room, you see various machines that don't particularly interest you. What IS of interest,\r\nhowever is a small iron box sealed with several large bolts. Shaking the box, you hear a small object inside. You could\r\nprobably remove the bolt if you had the right tool.";
                     options = new string[3] { "WRENCH", "SOUTHERN BLOCK", "BACK" };
                     positions = new int[3] { 9, 3, 3 };
+
+                    pbxMap.Image = Properties.Resources.In_Power_Mech_Room;
                 }
                 else if (position == 8 && hasWeldingKey)
                 {
@@ -269,6 +337,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nOpening the dusty power mechanics room, you see various machines that don't particularly interest you. What IS of interest,\r\nhowever is a small iron box sealed with several large bolts. It has been pryed open and has been cleaned out. There is now\r\nnothing left of interest in this room.";
                     options = new string[3] { "SOUTHERN BLOCK", "OK", "BACK" };
                     positions = new int[3] { 3, 3, 3 };
+
+                    pbxMap.Image = Properties.Resources.In_Power_Mech_Room;
                 }
                 else if (position == 9)
                 {
@@ -286,6 +356,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou jiggle the knob of the welding room, only to find it to be locked. Though you have a feeling it's nearby. You then \r\ndecide you'll head on back and come back later.";
                     options = new string[3] { "SOUTHERN BLOCK", "OK", "BACK" };
                     positions = new int[3] { 3, 3, 3 };
+
+                    pbxMap.Image = Properties.Resources.In_Welding_Room;
                 }
                 else if (position == 10 && hasWeldingKey)
                 {
@@ -293,6 +365,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nUsing the key you obtained in the small metal box, you open up the welding room ajar. Inside you find several WELDING \r\nMACHINES the could be of use.";
                     options = new string[4] { "WELDING", "MACHINES", "SOUTHERN BLOCK", "BACK" };
                     positions = new int[4] { 11, 11, 3, 3 };
+
+                    pbxMap.Image = Properties.Resources.In_Welding_Room;
                 }
                 else if (position == 11 && !hasChemicals)
                 {
@@ -334,6 +408,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou enter the Hairstyling room to be greeted by the smell of several hairsprays and perfumes. Entering the side rooms, you\r\nfind a pair of BARBER'S SCISSORS on one of the counters. Holding them in your hands, you think to yourself: Perhaps you\r\nshould perk up your hairstyle like all those other ruffians do nowadays.\r\nWhat do you think is rad these days? COMB-OVER, MOHAWK, MULLET, PONYTAIL, PIGTAILS, MUSHROOM CUT, SHAVE IT ALL";
                     options = new string[9] { "COMB-OVER", "MOHAWK", "MULLET", "PONYTAIL", "PIGTAILS", "MUSHROOM CUT", "SHAVE IT ALL", "SOUTHERN BLOCK", "BACK" };
                     positions = new int[9] { 13, 13, 13, 13, 13, 13, 13, 3, 3 };
+
+                    pbxMap.Image = Properties.Resources.In_Hairstyling_Room;
                 }
                 else if (position == 13)
                 {
@@ -348,6 +424,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou stroll on down to Northern Block. Performing a spot-check of the various hallways, you see a few points of interest. A\r\nSTAIRWELL, a CAFETERIA, an ELEVATOR, a HEALTH ROOM and the most important area in the game: the OFFICE.";
                     options = new string[7] { "OFFICE", "STAIRWELL", "CAFETERIA", "HEALTH ROOM", "ELEVATOR", "SOUTHERN BLOCK", "BACK" };
                     positions = new int[7] { 15, 16, 24, 26, 31, 3, 3 };
+
+                    pbxMap.Image = Properties.Resources.In_North_Section;
                 }
                 else if (position == 15 && !hasKey)
                 {
@@ -355,6 +433,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou haven't fixed the Office Key yet!";
                     options = new string[3] { "NORTHERN BLOCK", "OK", "BACK" };
                     positions = new int[3] { 14, 14, 14 };
+
+                    pbxMap.Image = Properties.Resources.In_Office;
                 }
                 else if (position == 15 && hasKey)
                 {
@@ -364,6 +444,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     hasWon = true;
                     position = 0;
                     storyChapter(position);
+
+                    pbxMap.Image = Properties.Resources.In_Office;
                 }
                 else if (position == 16)
                 {
@@ -371,6 +453,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou advance to the Northern Stairwell only to find a CAUTION: WET FLOOR prevents your way upstairs. However, another stairwell\r\nleading to the BASEMENT appears unblocked.";
                     options = new string[3] { "BASEMENT", "NORTHERN BLOCK", "BACK" };
                     positions = new int[3] { 17, 14, 14 };
+
+                    pbxMap.Image = Properties.Resources.In_North_Staircase;
                 }
                 else if (position == 17 && !hasCandlestick)
                 {
@@ -378,6 +462,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou descend the stairs and open the door to the BASEMENT only to discover that you can barely see two centiinches in front of\r\nyour face. Perhaps you should come back when you have something to help you illuminate the area.";
                     options = new string[3] { "NORTHERN BLOCK", "OK", "BACK" };
                     positions = new int[3] { 14, 14, 14 };
+
+                    pbxMap.Image = Properties.Resources.School_Level_1__Remaster_;
                 }
                 else if (position == 17 && hasCandlestick)
                 {
@@ -385,6 +471,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou descend the stairs only to discover that you can barely see two milliyards in front of yourself. However, you remember to\r\nbring out your trusty CANDLESTICK and swiftly light it. With your newfound light source, you proceed through the dark \r\ncorridors and begin to take your routine spot-check of the area. As you are doing so, you hear footsteps and see a dark\r\nshadow approaching from around the corner in front of you. You notice a PILLAR is to your left as the shadow looms closer.\r\nWhat will you do? HIDE BEHIND PILLAR, CONFRONT THE SHADOW, or TALK TO THE SHADOW";
                     options = new string[3] { "HIDE", "CONFRONT", "TALK" };
                     positions = new int[3] { 18, 19, 20 };
+
+                    pbxMap.Image = Properties.Resources.School_Level_1__Remaster_;
                 }
                 else if (position == 18)
                 {
@@ -436,8 +524,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                 {
                     // BASEMENT: THE PIPES: LOOK PIPES
                     lblText.Text += "\nLooking more closely at the pipes, you see a large sign above them reading \"CAUTION: GAS LINE\". Deciding it would be best to\r\nleave them be, you proceed through the small passage to your right.";
-                    options = new string[1] { "OK" };
-                    positions = new int[1] { 8 };
+                    options = new string[2] { "OK", "PASSAGE" };
+                    positions = new int[2] { 8, 8 };
                 }
                 else if (position == 24 && !hasCoin)
                 {
@@ -445,6 +533,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou enter the dimmed CAFETERIA. In the darkness, you spot a faint SHIMMER on the floor in front of you. Two different sets of\r\ndoors lead back to the NORTHERN BLOCK.";
                     options = new string[3] { "SHIMMER", "NORTHERN BLOCK", "BACK" };
                     positions = new int[3] { 25, 14, 14 };
+
+                    pbxMap.Image = Properties.Resources.In_Cafeteria;
                 }
                 else if (position == 24 && hasCoin)
                 {
@@ -452,6 +542,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou enter the dimmly lit CAFETERIA. There is nothing in here of much importance. You might as well just go back to the \r\nNORTHERN BLOCK where there is actually something to do.";
                     options = new string[3] { "NORTHERN BLOCK", "OK", "BACK" };
                     positions = new int[3] { 14, 14, 14 };
+
+                    pbxMap.Image = Properties.Resources.In_Cafeteria;
                 }
                 else if (position == 25)
                 {
@@ -469,6 +561,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou open the door to the HEALTH ROOM and (to your surprise) find it unlocked. Inside you find several CPR TEST DUMMIES, and a\r\ndesk on which a SMAll RING BOX can be found.";
                     options = new string[9] { "BOX", "SMALL BOX", "RING BOX", "SMALL RING BOX", "DUMMIES", "TEST DUMMIES", "CPR TEST DUMMIES", "NORTHERN BLOCK", "BACK" };
                     positions = new int[9] { 27, 27, 27, 27, 28, 28, 28, 14, 14 };
+
+                    pbxMap.Image = Properties.Resources.In_Health_Room;
                 }
                 else if (position == 26 && hasBungee)
                 {
@@ -476,6 +570,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou walk into the HEALTH ROOM but realize there is only one thing of importance. Do you remember what that is?";
                     options = new string[5] { "DUMMIES", "TEST DUMMIES", "CPR TEST DUMMIES", "NORTHERN BLOCK", "BACK" };
                     positions = new int[5] { 28, 28, 28, 14, 14 };
+
+                    pbxMap.Image = Properties.Resources.In_Health_Room;
                 }
                 else if (position == 27)
                 {
@@ -484,10 +580,17 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     pbxBungee.Visible = true;
 
                     lblText.Text += "\nYou pick up the small box and find it fits comfortably in your palm. You open it up to reveal Ms. Wood's BUNGEE EQUIPMENT \r\nkept inside. You always wondered why she brings this to every staff meeting. You then pocket the BUNGEE EQUIPMENT for later\r\nuse.";
-                    options = new string[3] { "NORTHERN BLOCK", "OK", "BACK" };
-                    positions = new int[3] { 14, 26, 26 };
+                    options = new string[6] { "DUMMIES", "TEST DUMMIES", "CPR TEST DUMMIES", "NORTHERN BLOCK", "OK", "BACK" };
+                    positions = new int[6] { 28, 28, 28, 14, 26, 26 };
                 }
-                else if (position == 28)
+                else if (position == 28 && !hasBungee)
+                {
+                    // HEALTH ROOM: TEST DUMMIES OF DOOM
+                    lblText.Text += "\nYou look at the CPR TEST DUMMIES. You notice one that reminds you of a CPR TEST DUMMY. A note can be found on one of the \r\ndummies that reminds you of a note on a CPR TEST DUMMY. Reading it, it reminds you of remembering to be reminded that CPR\r\nTEST DUMMIES look like CPR TEST DUMMIES and notes look like notes. Also, you then remember about this one time you went into\r\na school alone and entered a HEALTH ROOM that had CPR TEST DUMMIES. When you looked at those CPR TEST DUMMIES, it reminded\r\nyou of CPR TEST DUMMIES. You also remember that a NOTE could be FOUND on ONE that reminded you that some WORDS are in \r\nCAPTIAL LETTERS. Can you REMEMBER those CPR TEST DUMMIES?";
+                    options = new string[10] { "BOX", "SMALL BOX", "RING BOX", "SMALL RING BOX", "REMEMBER", "DUMMIES", "TEST DUMMIES", "CPR TEST DUMMIES", "NORTHERN BLOCK", "BACK" };
+                    positions = new int[10] { 27, 27, 27, 27, 29, 29, 29, 29, 14, 26 };
+                }
+                else if (position == 28 && hasBungee)
                 {
                     // HEALTH ROOM: TEST DUMMIES OF DOOM
                     lblText.Text += "\nYou look at the CPR TEST DUMMIES. You notice one that reminds you of a CPR TEST DUMMY. A note can be found on one of the \r\ndummies that reminds you of a note on a CPR TEST DUMMY. Reading it, it reminds you of remembering to be reminded that CPR\r\nTEST DUMMIES look like CPR TEST DUMMIES and notes look like notes. Also, you then remember about this one time you went into\r\na school alone and entered a HEALTH ROOM that had CPR TEST DUMMIES. When you looked at those CPR TEST DUMMIES, it reminded\r\nyou of CPR TEST DUMMIES. You also remember that a NOTE could be FOUND on ONE that reminded you that some WORDS are in \r\nCAPTIAL LETTERS. Can you REMEMBER those CPR TEST DUMMIES?";
@@ -532,6 +635,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
 
                     options = new string[4] { "CLIMB", "POLE", "NORTHERN BLOCK", "BACK" };
                     positions = new int[4] { 32, 32, 14, 14 };
+
+                    pbxMap.Image = Properties.Resources.In_Elevator;
                 }
                 else if (position == 32 && !hasBungee)
                 {
@@ -555,6 +660,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nUsing your amazing detective skills, you take a scan of the second floor. You are currently in the WESTERN BLOCK. You \r\nnote a small JANITOR'S CLOSET, a CHEMISTRY LAB, and you also note a MATH ROOM to your left. You also notice that there\r\nis an EASTERN BLOCK. So there.";
                     options = new string[10] { "NORTHERN BLOCK", "POLE", "BACK", "CHEMISTRY LAB", "LAB", "JANITOR'S CLOSET", "JANITORS CLOSET", "CLOSET", "MATH ROOM", "EASTERN BLOCK" };
                     positions = new int[10] { 49, 49, 49, 34, 34, 38, 38, 38, 42, 45 };
+
+                    pbxMap.Image = Properties.Resources.In_Western_Block;
                 }
                 else if (position == 34 && !hasChemicals)
                 {
@@ -562,6 +669,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nEntering the dimly dim CHEMISTRY LAB you see several concoctions brewing in small vials. You see several highly acidic \r\ncompounds on a rickety table near the western end of the room. Beyond the table, you see two large VATS labelled: \"Oxygen\" \r\nand \"Acetylene\". You can approach the VATS from the LEFT or RIGHT. On the teacher's desk, you see a bowl of CHEERIOS with no \r\nmilk and a STYROFOAM CUP with what appears to be an opaque white liquid.";
                     options = new string[7] { "CHEERIOS", "STYROFOAM", "CUP", "LEFT", "RIGHT", "WESTERN BLOCK", "BACK" };
                     positions = new int[7] { 35, 35, 35, 36, 37, 33, 33 };
+
+                    pbxMap.Image = Properties.Resources.In_Chemistry_Lab;
                 }
                 else if (position == 34 && hasChemicals)
                 {
@@ -569,6 +678,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou look at the CHEMISTRY LAB door and remember that you already have the necessary equipment from this room. Why the hell \r\nwould you want to go back?";
                     options = new string[3] { "WESTERN BLOCK", "OK", "BACK" };
                     positions = new int[3] { 33, 33, 33 };
+
+                    pbxMap.Image = Properties.Resources.In_Chemistry_Lab;
                 }
                 else if (position == 35)
                 {
@@ -604,6 +715,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou open the small JANITOR'S CLOSET and peek inside. You see several items on various shelves. Of note is a CANDLESTICK, a \r\nsmall NOTE, and a clear SAFE labeled: \"Useful inventory items\".";
                     options = new string[5] { "NOTE", "SAFE", "CANDLE", "WESTERN BLOCK", "BACK" };
                     positions = new int[5] { 39, 40, 41, 33, 33 };
+
+                    pbxMap.Image = Properties.Resources.In_Janitors_Closet;
                 }
                 else if (position == 38 && hasCandlestick)
                 {
@@ -611,20 +724,36 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nReturning to the JANITOR'S CLOSET, you see a small NOTE, and a clear SAFE labelled: \"Useful inventory items\" on the front-\r\nhand side.";
                     options = new string[4] { "NOTE", "SAFE", "WESTERN BLOCK", "BACK" };
                     positions = new int[4] { 39, 40, 33, 33 };
+
+                    pbxMap.Image = Properties.Resources.In_Janitors_Closet;
                 }
-                else if (position == 39)
+                else if (position == 39 && !hasCandlestick)
                 {
                     // JANITOR'S CLOSET: LOOK NOTE
                     lblText.Text += "\nYou pick up the small note and give it a read. It says: \"Gone to BASEMENT to fix loose pipes; will return WRENCH when \r\nfinished.\" - Janitor. BASEMENT and WRENCH, eh? That's definitely not useful information. Though why would the Janitor leave a\r\nnote for himself in his own closet? Now that's a real mystery! Also, why did he capitalize all of basement and wrench? Seems\r\nlike an odd man, or just likes to break the fourth wall. Who knows? Only God!";
-                    options = new string[3] { "WESTERN BLOCK", "OK", "BACK" };
-                    positions = new int[3] { 33, 38, 38 };
+                    options = new string[5] { "SAFE", "CANDLE", "WESTERN BLOCK", "OK", "BACK" };
+                    positions = new int[5] { 40, 41, 33, 38, 38 };
                 }
-                else if (position == 40)
+                else if (position == 39 && hasCandlestick)
+                {
+                    // JANITOR'S CLOSET: LOOK NOTE
+                    lblText.Text += "\nYou pick up the small note and give it a read. It says: \"Gone to BASEMENT to fix loose pipes; will return WRENCH when \r\nfinished.\" - Janitor. BASEMENT and WRENCH, eh? That's definitely not useful information. Though why would the Janitor leave a\r\nnote for himself in his own closet? Now that's a real mystery! Also, why did he capitalize all of basement and wrench? Seems\r\nlike an odd man, or just likes to break the fourth wall. Who knows? Only God!";
+                    options = new string[4] { "SAFE", "WESTERN BLOCK", "OK", "BACK" };
+                    positions = new int[4] { 40, 33, 38, 38 };
+                }
+                else if (position == 40 && !hasCandlestick)
                 {
                     // JANITOR'S CLOSET: LOOK SAFE
                     lblText.Text += "\nYou look at the large SAFE and discover it's locked with a 72-digit passcode. You peer through the clear glass and discover \r\nthe Janitor's trusty REVOLVER, his ROCKET LAUNCHER, a small bottle of ANALGESIC, a SKELETON KEY, an ELEVATOR CLIMBING KIT, a\r\n12-case of PEPSI, a LONG METAL OBJECT, a FLASHLIGHT, a KEY REPAIR KIT, a spare OFFICE KEY, several TINDERBOXES, \r\nTHERMOWEAVE UNDERWEAR, a HAZMAT SUIT, the Janitor's pet rock ROCKINGTON, and a 394-page BOOK entitled: \"The code to this safe\r\nis in here.\" You take a few guesses as to what the passcode is, but are all in vain. You give up at\r\n000000000000000000000000000000000000000000000000000000000000000000000009";
-                    options = new string[3] { "WESTERN BLOCK", "OK", "BACK" };
-                    positions = new int[3] { 33, 38, 38 };
+                    options = new string[5] { "NOTE", "CANDLE", "WESTERN BLOCK", "OK", "BACK" };
+                    positions = new int[5] { 39, 41, 33, 38, 38 };
+                }
+                else if (position == 40 && hasCandlestick)
+                {
+                    // JANITOR'S CLOSET: LOOK SAFE
+                    lblText.Text += "\nYou look at the large SAFE and discover it's locked with a 72-digit passcode. You peer through the clear glass and discover \r\nthe Janitor's trusty REVOLVER, his ROCKET LAUNCHER, a small bottle of ANALGESIC, a SKELETON KEY, an ELEVATOR CLIMBING KIT, a\r\n12-case of PEPSI, a LONG METAL OBJECT, a FLASHLIGHT, a KEY REPAIR KIT, a spare OFFICE KEY, several TINDERBOXES, \r\nTHERMOWEAVE UNDERWEAR, a HAZMAT SUIT, the Janitor's pet rock ROCKINGTON, and a 394-page BOOK entitled: \"The code to this safe\r\nis in here.\" You take a few guesses as to what the passcode is, but are all in vain. You give up at\r\n000000000000000000000000000000000000000000000000000000000000000000000009";
+                    options = new string[4] { "NOTE", "WESTERN BLOCK", "OK", "BACK" };
+                    positions = new int[4] { 39, 33, 38, 38 };
                 }
                 else if (position == 41)
                 {
@@ -633,8 +762,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     pbxCandlestick.Visible = true;
 
                     lblText.Text += "\nYou pick up the CANDLESTICK and shove it in your pocket. This could come in handy for investigating those oh-so dark areas.";
-                    options = new string[3] { "WESTERN BLOCK", "OK", "BACK" };
-                    positions = new int[3] { 33, 38, 38 };
+                    options = new string[5] { "NOTE", "SAFE", "WESTERN BLOCK", "OK", "BACK" };
+                    positions = new int[5] { 39, 40, 33, 38, 38 };
                 }
                 else if (position == 42 && !hasSledgehammer)
                 {
@@ -642,6 +771,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nYou enter the MATH ROOM and discover a largely small TEXTBOOK on one desk. You also see a SLEDGEHAMMER snuggly put in a small\r\ncup on the desk to your right's left. ";
                     options = new string[4] { "TEXTBOOK", "SLEDGEHAMMER", "WESTERN BLOCK", "BACK" };
                     positions = new int[4] { 43, 44, 33, 33 };
+
+                    pbxMap.Image = Properties.Resources.In_Math_Room;
                 }
                 else if (position == 42 && hasSledgehammer)
                 {
@@ -649,6 +780,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nLooking again at the MATH ROOM, you spot a small TEXTBOOK on one desk, and an exit leading back to the WESTERN BLOCK.";
                     options = new string[3] { "TEXTBOOK", "WESTERN BLOCK", "BACK" };
                     positions = new int[3] { 43, 33, 33 };
+
+                    pbxMap.Image = Properties.Resources.In_Math_Room;
                 }
                 else if (position == 43)
                 {
@@ -666,8 +799,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     pbxSledgehammer.Visible = true;
 
                     lblText.Text += "\nYou pick up the SLEDGEHAMMER and slide it snuggly into your side pocket. Abe Lincoln won't know what hit 'em.";
-                    options = new string[3] { "WESTERN BLOCK", "OK", "BACK" };
-                    positions = new int[3] { 33, 42, 42 };
+                    options = new string[4] { "TEXTBOOK", "WESTERN BLOCK", "OK", "BACK" };
+                    positions = new int[4] { 43, 33, 42, 42 };
                 }
                 else if (position == 45 && !hasLooseleaf)
                 {
@@ -675,6 +808,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nLooking around the EASTERN BLOCK, you notice all of the doors on this side of the school are locked. You do however, notice a\r\nsmall piece of LOOSELEAF on the floor in front of you. Beyond the sheet lies what appears to be a shortcut back to the \r\nWESTERN BLOCK.";
                     options = new string[3] { "LOOSELEAF", "WESTERN BLOCK", "BACK" };
                     positions = new int[3] { 47, 48, 48 };
+
+                    pbxMap.Image = Properties.Resources.In_Eastern_Block;
                 }
                 else if (position == 45 && hasLooseleaf)
                 {
@@ -682,6 +817,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text = "\nWhy did you come back here? You already did what was required for this area. Go away!";
                     options = new string[3] { "WESTERN BLOCK", "OK", "BACK" };
                     positions = new int[3] { 33, 33, 33 };
+
+                    pbxMap.Image = Properties.Resources.In_Eastern_Block;
                 }
                 else if (position == 46)
                 {
@@ -715,6 +852,8 @@ namespace The_Amazing_Text_Adventure__Remastered_
                     lblText.Text += "\nYou deftly launch yourself back through the elevator shaft and swing yourself around the POLE like you're goddamn Spider-Man! \r\nThat BUNGEE EQUIPMENT that Ms. Woods carries around is amazing, some would even say spectacular. You swing yourself right \r\nthrough to the first floor. Noice! *High-Five*";
                     options = new string[3] { "NORTHERN BLOCK", "OK", "BACK" };
                     positions = new int[3] { 14, 14, 14 };
+
+                    pbxMap.Image = Properties.Resources.In_Elevator;
                 }
             }
             else

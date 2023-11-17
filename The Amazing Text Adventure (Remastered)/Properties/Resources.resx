@@ -118,37 +118,91 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Key (Broken)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Key (Broken).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="School Level 1 (Remaster)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\School Level 1 (Remaster).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Key" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Bungee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Bungee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Candlestick" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Candlestick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Chemicals" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chemicals.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Looseleaf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Looseleaf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sledgehammer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sledgehammer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Key" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Key (Broken)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Key (Broken).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Candlestick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Candlestick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="School Level 1 (Remaster)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\School Level 1 (Remaster).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Welding Key" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Welding Key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Chemicals" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chemicals.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Sledgehammer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sledgehammer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Wrench" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wrench.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In Cafeteria" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In Cafeteria.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In Chemistry Lab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In Chemistry Lab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In Eastern Block" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In Eastern Block.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In Elevator" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In Elevator.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In Hairstyling Room" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In Hairstyling Room.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In Health Room" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In Health Room.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In Janitors Closet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In Janitors Closet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In Math Room" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In Math Room.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In North Section" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In North Section.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In North Staircase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In North Staircase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In Office" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In Office.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In Power Mech Room" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In Power Mech Room.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In South Section" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In South Section.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In South Staircase" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In South Staircase.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In Tech Room" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In Tech Room.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In Welding Room" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In Welding Room.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="In Western Block" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\In Western Block.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="School Level 2 (Remaster)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\School Level 2 (Remaster).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

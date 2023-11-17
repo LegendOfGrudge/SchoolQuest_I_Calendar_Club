@@ -41,8 +41,8 @@
             this.pbxLooseleaf = new System.Windows.Forms.PictureBox();
             this.pbxBrokenKey = new System.Windows.Forms.PictureBox();
             this.pnlText = new System.Windows.Forms.Panel();
-            this.txbInput = new System.Windows.Forms.TextBox();
             this.lblText = new System.Windows.Forms.Label();
+            this.txbInput = new System.Windows.Forms.TextBox();
             this.pnlPictures.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxMap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxKey)).BeginInit();
@@ -205,6 +205,15 @@
             this.pnlText.Size = new System.Drawing.Size(1113, 817);
             this.pnlText.TabIndex = 1;
             // 
+            // lblText
+            // 
+            this.lblText.AutoSize = true;
+            this.lblText.Location = new System.Drawing.Point(3, 11);
+            this.lblText.Name = "lblText";
+            this.lblText.Size = new System.Drawing.Size(248, 16);
+            this.lblText.TabIndex = 1;
+            this.lblText.Text = "Welcome to the Amazing Text Adventure";
+            // 
             // txbInput
             // 
             this.txbInput.BackColor = System.Drawing.SystemColors.Desktop;
@@ -214,15 +223,6 @@
             this.txbInput.Size = new System.Drawing.Size(1107, 22);
             this.txbInput.TabIndex = 0;
             this.txbInput.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txbInput_KeyDown);
-            // 
-            // lblText
-            // 
-            this.lblText.AutoSize = true;
-            this.lblText.Location = new System.Drawing.Point(3, 11);
-            this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(248, 16);
-            this.lblText.TabIndex = 1;
-            this.lblText.Text = "Welcome to the Amazing Text Adventure";
             // 
             // frmGameDesign
             // 
